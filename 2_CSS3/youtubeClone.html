@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>youtubeClone</title>
+  <link rel="stylesheet" href="./css/youtubeClone.css">
+  <script src="https://kit.fontawesome.com/782dab8242.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container"> <!--flex container(부모)-->
+    <div class="header">      <!-- header 영역-->
+      <div>   <!-- header 왼쪽 -->
+        <span> &nbsp;</span>
+        <a id="bar-btn"  href="#" class="fa-solid fa-bars"></a>
+        <a id="youtube-btn" href="#" class="fa-brands fa-youtube"></a>
+        <a id="youtube-btn-text" href="#"><strong>YouTube</strong><sup>kr</sup></a>
+      </div>
+
+      <div class="header-search"> <!-- header 중앙 바꿔야함-->
+        <form action="#">
+          <fieldset> 
+            <input type="search" id="query" name="query" autocomplete="off" placeholder="검색">
+            <a href="#" id="search-btn" class="fa-solid fa-magnifying-glass"></a>
+          </fieldset>          
+        </form>
+        <button href="#" class="fa-solid fa-microphone"></button>
+      </div>
+
+      <div class="header-login">  <!-- header 오른쪽-->
+        <a href="#" class="fa-solid fa-video"></a>
+        <a href="#" class="fa-regular fa-bell"></a>
+        <a href="#" class="fa-regular fa-circle-user"></a>
+      </div>
+    </div>
+
+
+    <div class="body">        <!-- body 영역-->
+      <div class="body-left">
+        <div class="body-left-video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/z1K_y3apxGc?si=cNNLxkvIxVxCSJdy"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="body-left-body">
+          <div><h3>지구상에서 유일하게 바이러스를 극복한 생명체 (진화 사기캐..) | 과학을 보다 EP.77</h3></div>
+
+          <div class="wizet">
+            <div class="wizet-left">
+              <a href="#" class="fa-brands fa-wordpress"></a>
+              <div>
+                <div> <a href="#">보다 BODA</a></div>
+                <div>구독자 201만명</div>
+              </div>
+              <div id="wizet-left-hover1">가입</div>
+              <div id="wizet-left-hover2">
+                <i class="fa-regular fa-bell"></i>
+                구독중
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+            </div>
+            
+            <div class="wizet-right">
+              <fieldset>
+                <div id="wizet-right-hover1">
+                  <i class="fa-regular fa-thumbs-up"></i>
+                  1만
+                </div>
+                <div id="wizet-right-hover2" class="fa-regular fa-thumbs-down"></div>
+              </fieldset>          
+              <div id="wizet-right-hover3" class="fa-solid fa-share">공유</div>
+              <div id="wizet-right-hover4" class="fa-solid fa-download">오프라인저장</div>
+              <div id="wizet-right-hover5" class="fa-regular fa-heart"><span>Thanks</span></div>
+              <div id="wizet-right-hover6" class="fa-solid fa-ellipsis"></div>
+            </div>
+          </div>
+
+          <div class="script1">
+            <button>
+              조회수 64만회 3일 전 ✪ 회원 우선 공개 과학을 보다 <br>
+              오늘은 정영진님과 물리학자 김범준 교수님, 미생물학자 김응빈 교수님, 진화생물학자 이대한 교수님, 천문학자
+              우주먼지님을 모시고 ‘바이러스를 극복한 박쥐의 진화’에 대한 이야기를 나눠봤습니다.
+              <button>더보기</button>
+            </button>
+          </div>
+
+          <table div class="body-ad">
+            <tr colspan="4"><strong>보다 BODA 매장 쇼핑</strong></tr>
+            <tr style="height: 100px;">
+              <td> <a href="#" class="body-adv">
+                  <div><img src="../images/BODA_1.JPG" alt=""></div>
+                  <div>
+                    <div>슈뢰딩거 고양이</div>
+                    <div><i class="fa-solid fa-won-sign"></i>36,690</div>
+                    <div>보다몰<i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                  </div>
+                </a></td>
+              <td> <a href="#" class="body-adv">
+                  <div><img src="../images/BODA_2.JPG" alt=""></div>
+                  <div>
+                    <div>슈뢰딩거 고양이</div>
+                    <div><i class="fa-solid fa-won-sign"></i>36,690</div>
+                    <div>보다몰<i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                  </div>
+                </a></td>
+              <td> <a href="#" class="body-adv">
+                  <div><img src="../images/BODA_3.JPG" alt=""></div>
+                  <div>
+                    <div>슈뢰딩거 고양이</div>
+                    <div><i class="fa-solid fa-won-sign"></i>36,690</div>
+                    <div>보다몰<i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                  </div>
+                </a></td>
+              <td> <a href="#" class="body-adv">
+                  <div><img src="../images/BODA_4.JPG" alt=""></div>
+                  <div>
+                    <div>B612 행성에 놀러</div>
+                    <div><i class="fa-solid fa-won-sign"></i>36,690</div>
+                    <div>보다몰<i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                  </div>
+                </a></td>
+            </tr>
+          </table>
+
+          <div class="body-comment">
+            <div>
+              <strong>댓글 702개</strong>
+              <select>
+                <option value="1" selected hidden>정렬 기준</option>
+                <option value="2">인기 댓글순</option>
+                <option value="3">최신순</option>
+              </select>
+            </div>
+
+            <div id="me-comment">
+              <div><i class="fa-regular fa-circle-user"></i></div>
+              <div>
+                <div><input type="text" size="50" placeholder="댓글 추가..."></div>
+                <div>
+                  <button>취소</button>
+                  <button disabled>댓글</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="you-comment">
+              <table>
+                <tr>
+                  <td rowspan="5"><i class="fa-regular fa-circle-user"></i></td>
+                  <td>
+                    <i class="fa-solid fa-thumbtack"></i>
+                    보다 BODA님이 고정함
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="#">@kimyesbio</a>
+                    <a href="#">3일전</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    방송 녹화 이후 절친한 전문의에게 확인한 내용을 공유합니다. <br>
+                    ‘모낭 이식’이 올바른 표현이고, 자기 모낭을 이식합니다. 거부반응이 없다면 타인 것도 가능하겠지만,
+                    피부는 면역이 높은 부분이라 아직 시도된 적이 없다고 합니다.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a class="fa-regular fa-thumbs-up" href="#"></a> 879
+                    <a class="fa-regular fa-thumbs-down" href="#"></a>
+                    <a href="#">답글</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td><button><i class="fa-solid fa-arrow-down"></i>답글27개</button></td>
+                </tr>
+              </table>
+
+              <table>
+                <tr>
+                  <td rowspan="3"><i class="fa-regular fa-circle-user"></i></td>
+                  <td>
+                    <a href="#">@보다BODA</a>
+                    <a href="#">3일전(수정됨)</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    과학을 보다 질문 게시판 링크:
+                    <a href="https://cafe.naver.com/boda100">https://cafe.naver.com/boda100</a> <br>
+                    <과학을 보다> 책 2탄을 출간하게 되었습니다! <br>
+                      미처 하지 못했던 얘기들, 함께 얘기 나눴지만 좀 더 설명하고 싶었던 과학을 보다 뒷이야기 그리고
+                      구독자분들의 다양한 질문들을 모아 열심히 책을 준비했습니다. 많은 관심 부탁드립니다 <br>
+                      <button>자세히 보기</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a class="fa-regular fa-thumbs-up" href="#"></a> 22
+                    <a class="fa-regular fa-thumbs-down" href="#"></a>
+                    <a href="#">답글</a>
+                  </td>
+                </tr>
+              </table>
+
+              <table>
+                <tr>
+                  <td rowspan="4"><i class="fa-regular fa-circle-user"></i></td>
+                  <td>
+                    <a href="#">@user-rh2nr9jn7n</a>
+                    <a href="#">10일 전</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    오! 응빈 교수님이랑 대한 교수님 같이 나와서 생물 얘기 많이 해주시면 좋겠다했었는데 너무 조아여!!!!!!!!
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a class="fa-regular fa-thumbs-up" href="#"></a> 369
+                    <a class="fa-regular fa-thumbs-down" href="#"></a>
+                    <a href="#">답글</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td><button><i class="fa-solid fa-arrow-down"></i>답글2개</button></td>
+                </tr>
+              </table>
+
+              <table>
+                <tr>
+                  <td rowspan="4"><i class="fa-regular fa-circle-user"></i></td>
+                  <td>
+                    <a href="#">@sinamie</a>
+                    <a href="#">3일 전(수정됨)</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="#">27:17</a> "대학원생 시켰구나" <br>
+                    오늘 멤버 정말 어베저스 인정 <br>
+                    최애 교수님들 모이셔서 3번 정주행 했어요. <i class="fa-solid fa-heart"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a class="fa-regular fa-thumbs-up" href="#"></a> 170
+                    <a class="fa-regular fa-thumbs-down" href="#"></a>
+                    <a href="#">답글</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td><button><i class="fa-solid fa-arrow-down"></i>답글2개</button></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="body-right">
+        <div class="body-right-ad1">
+          <div>
+            <p>국비교육과정 자바개발자 취업률 1위</p>
+            <p>KH 정보교육원</p>
+          </div>
+          <div>
+            <div>로고영역</div>
+            <div>
+              <div>
+                IT 취업 전문 교육기관
+                Kh정보교육연구원
+              </div>
+              <div>스폰서 khedu.co.kr</div>              
+            </div>
+            <div>
+              <button>문의하기</button>
+              <button class="fa-solid fa-ellipsis-vertical"></button>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <button>모두</button>
+          <button>보다 BODA 제공</button>
+          <button>관련 콘텐츠</button>
+          <button>감상한</button>
+          <button class="fa-solid fa-angle-right"></button>
+        </div>
+
+        <div class="body-right-ad2">
+          <div><img src="../images/body-right-ad2.JPG" alt=""></div>
+          <div>
+            <div id="body-right-ad2-KH">
+              <div>100%무료 국비지원 KH정보교육원</div>
+              <div>
+                국내 최다 수료생 & 취업생 배출, JAVA 개발자 전문 교육, 1:1 밀착 취업지원 <br>
+                <strong>스폰서</strong> KH정보교육원
+              </div>
+              <a href="#">자세히 알아보기</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="recommand-video">
+          <div class="recommand-video-area">
+            <div><a href="#"><img src="../images/recommand-video-area-1.JPG" alt=""></a></div>
+            <div>
+              <div>시원</div>
+              <div>런닝맨-스브스 공식채널 <i class="fa-solid fa-circle-check"></i></div>
+              <div>조회수 43만회 1일 전</div>
+              <button>새동영상</button>
+            </div>
+            <div class="fa-solid fa-ellipsis-vertical"></div>
+          </div>
+
+          <div class="recommand-video-area">
+            <div><a href="#"><img src="../images/recommand-video-area-2.JPG" alt=""></a></div>
+            <div>
+              <div>[니꺼내먹] 닭발 팔아서 빚 다갚았습니다</div>
+              <div>백종원 PAIK JONG WON</div>
+              <div>조회수 93만회 1일 전</div>
+              <button>새동영상</button>
+            </div>
+            <div class="fa-solid fa-ellipsis-vertical"></div>
+          </div>
+
+          <div class="recommand-video-area">
+            <div><a href="#"><img src="../images/recommand-video-area-3.JPG" alt=""></a></div>
+            <div>
+              <div>[#벌거벗은세계사](160분) 사실 우리가 아는 삼국지는 거짓이...</div>
+              <div>디글 :Diggle <i class="fa-solid fa-circle-check"></i></div>
+              <div>조회수 315만회 1년 전</div>
+              <button>새동영상</button>
+            </div>
+            <div class="fa-solid fa-ellipsis-vertical"></div>
+          </div>
+
+          <div class="recommand-video-area">
+            <div><a href="#"><img src="../images/recommand-video-area-4.JPG" alt=""></a></div>
+            <div>
+              <div>[#알쓸별잡](50분) 잡학 마니아들 드루와 닉값 제대로 하는...</div>
+              <div>디글 :Diggle <i class="fa-solid fa-circle-check"></i></div>
+              <div>조회수 45만회 3개월 전</div>
+              <button>새동영상</button>
+            </div>
+            <div class="fa-solid fa-ellipsis-vertical"></div>
+          </div>
+
+          <div class="recommand-video-area">
+            <div><a href="#"><img src="../images/recommand-video-area-5.JPG" alt=""></a></div>
+            <div>
+              <div>노가리</div>
+              <div>런닝맨-스브스 공식채널 <i class="fa-solid fa-circle-check"></i></div>
+              <div>조회수 118만회 3주 전</div>
+            </div>
+            <div class="fa-solid fa-ellipsis-vertical"></div>
+          </div>
+
+          <div class="recommand-video-area">
+            <div><a href="#"><img src="../images/recommand-video-area-6.JPG" alt=""></a></div>
+            <div>
+              <div>[EN] 접수완료는 핑계고 | EP.54</div>
+              <div>뜬뜬 DdeunDdeun <i class="fa-solid fa-circle-check"></i></div>
+              <div>조회수 363만회 3일 전</div>
+              <button>새동영상</button>
+            </div>
+            <div class="fa-solid fa-ellipsis-vertical"></div>
+          </div>
+
+          <div class="recommand-video-area">
+            <div><a href="#"><img src="../images/recommand-video-area-7.JPG" alt=""></a></div>
+            <div>
+              <div>[#벌거벗은세계사](200분) 삼국지 완벽하게 이해하고 싶다면...</div>
+              <div>디글 :Diggle <i class="fa-solid fa-circle-check"></i></div>
+              <div>조회수 179만회 3개월 전</div>
+            </div>
+            <div class="fa-solid fa-ellipsis-vertical"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

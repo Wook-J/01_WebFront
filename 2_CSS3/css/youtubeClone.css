@@ -1,0 +1,205 @@
+*{box-sizing: border-box;}
+.container {
+  /* border: 2px solid black;  */
+  display: flex; flex-direction: column;
+}
+
+/* header 영역 */
+.header{ 
+  height: 50px;
+  display: flex; flex-direction: row;
+  justify-content: space-between;
+}
+
+.header > div:nth-child(1) {
+  width: 200px; background-color: white; line-height: 35px;
+}
+.header > div:nth-child(2) {    
+  flex-basis: 50%;
+  display: flex; justify-content: center; align-items: center;
+}
+.header > div:nth-child(3) {
+  width: 180px;
+  display: flex; align-items: center;
+  justify-content: space-around;
+}
+
+#bar-btn{
+  height: 80%; width:35px; font-size: 20px; background-color: transparent;
+  border: none; cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+#youtube-btn{
+  height: 80%; width: 30px; font-size: 30px; background-color: transparent;
+  border: none; cursor: pointer;
+  text-decoration: none;
+  color: red;
+}
+#youtube-btn-text{
+  height: 80%; width: 100px; font-size: 25px; background-color: transparent;
+  border: none; cursor: pointer;
+  text-decoration: none;
+  color: black; letter-spacing: -2px;
+}
+#youtube-btn-text >sup{ font-size: 15px;}
+
+.header-search{display: flex;}
+.header-search > form {
+  flex-basis: 85%;
+  display: flex; 
+}
+.header-search > a{
+  flex-basis: 15%;
+} 
+
+.header-search fieldset{
+  margin-left: 5px; padding: 0;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  flex-basis: 100%; display: flex;
+}
+.header-search input{
+  border: none; 
+  background-color: transparent;
+  padding: 10px 0px 10px 10px; margin-left: 5px;
+  font-size: 20px;
+  flex-basis: 90%;
+  outline: none;
+}
+#search-btn{
+  flex-basis: 10%; text-decoration: none;
+  font-size: 20px; color: black;
+  border-left: 1px solid #ddd;
+  padding: 12px 0 10px 14px;
+}
+.header-search > button {
+  display: inline;
+  margin-left: 10px; color: black;
+  padding: 13px;
+  border: 1px solid #ddd; border-radius: 30px;
+  background-color: #ddd;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.header-login > a{
+  text-decoration: none; color: black;
+  font-size: 25px;
+}
+
+
+/* body 영역*/
+
+.body{
+  border: 1px dashed hotpink;
+  padding: 15px;
+  margin-top: 30px;
+  display: flex;
+}
+.body-left{
+  flex-basis: 72%; border: 1px dashed black;
+  display: flex; flex-direction: column;
+}
+.body-left-video{ 
+  width: 100%;
+  border: 3px dashed red;
+  display: flex; flex-direction: row;
+  justify-content: center;
+}
+iframe {
+  width: 70vw; /* 뷰포트 너비의 70%로 설정 */
+  height: calc(70vw * 9 / 16); /* calc() 함수로 16:9 비율을 유지 */
+  margin: 0 auto; /* 중앙 정렬 */
+}
+
+.body-left-body{ display: flex; flex-direction: column;}
+
+.body-left-body > .wizet{ display: flex; justify-content: space-between;}
+
+.body-left-body > .wizet > div:nth-of-type(1){
+  width: 350px; border: 1px solid black;
+  background-color: yellow;
+  display: flex; flex-direction: row;
+  align-items: center;
+}
+.body-left-body > .wizet > div:nth-of-type(2){
+  width: 500px; padding-right: 10px;
+  border: 1px solid black;
+  display: flex; align-items: center; justify-content: end;
+}
+.wizet-left > a {
+  
+  font-size: 40px; color: skyblue;
+  margin-right: 15px;
+}
+.wizet-left > div a {
+  text-decoration: none;
+  font-weight: bold; font-size: 18px;
+  letter-spacing: -1px;
+}
+.wizet-left > div > div:last-of-type{ font-size: 12px;}
+#wizet-left-hover1 {
+  border: 1px solid black;
+  border-radius: 50px;
+  width: 60px; height: 40px; background-color: black;
+  color: white;
+  text-align: center; line-height: 35px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+#wizet-left-hover1:hover{ background-color: rgb(94, 94, 94);}
+
+#wizet-left-hover2 {
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  width: 100px; height: 40px; background-color: #ddd;
+  color: black;
+  text-align: center; line-height: 35px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+#wizet-left-hover2:hover{ background-color: rgb(94, 94, 94);}
+
+.wizet-right > fieldset{ 
+  width: 130px;
+  display: flex; justify-content: space-between;
+  border: 1px solid #ddd; border-radius: 50px; background-color: #ddd;
+  margin-right: 10px;
+}
+#wizet-right-hover1 {
+  font-size: 17px; border-right: 1px solid black;
+  padding: 0 12px 0 0;
+  cursor: pointer;
+}
+#wizet-right-hover1:hover{ background-color: rgb(94, 94, 94);}
+
+/* 여기서부터 다시하기! */
+
+
+
+
+.script1 > button{
+  text-align: left;
+  cursor: pointer;
+}
+
+.body-adv{
+  display: flex;
+}
+.body-adv > div:nth-of-type(2){
+  display: flex; flex-direction: column;
+}
+.body-comment > div:nth-of-type(1) > strong{ font-size: 20px;}
+#me-comment{
+  display: flex;
+  border: 1px solid red;
+}
+.you-comment{border: 1px solid black;}
+
+
+.body-right{
+  flex-basis: 28%; border: 1px dashed yellow; 
+  display: flex; flex-direction: column;
+}
+

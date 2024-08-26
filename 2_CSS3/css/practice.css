@@ -1,0 +1,152 @@
+div{border: 1px solid black; box-sizing: border-box;}
+
+/* 문제1 */
+.container-1{   /* 가장 바깥쪽 부모 */
+    display: flex;
+    width: 800px; height: 500px;
+    flex-direction: column; /* block처럼 쌓여있어서 메인축을 열(column, 세로) 방향으로 변경 */
+}
+
+.header-1, .footer-1 { flex-basis: 20%; background-color: gray; }
+
+.body-1{  /* body-item-n의 부모이면서, container-1의 자식 */
+    flex-basis: 60%;    /* 자식 속성 */
+    display: flex; flex-direction: row;   /* 부모 속성 */
+}
+
+.body-1 > div:first-child{ background-color: skyblue; flex-basis: 30%; }
+.body-1 > div:nth-child(2){ background-color: tomato; flex-basis: 50%; }
+.body-1 > div:last-child{ background-color: antiquewhite; flex-basis: 20%; }
+
+
+
+/* 문제 2 */
+.container-2{
+    width: 800px; height: 500px;
+    display: flex; flex-direction: column;
+}
+
+.header-2 {flex-basis: 20%; background-color: red;}
+.body-2 {
+    flex-basis: 80%;
+    display: flex; flex-direction: row;
+}
+.body-2 > div:nth-of-type(1) { flex-basis: 30%; background-color: yellow;}
+.body-2 > div:nth-of-type(2) { 
+    flex-basis: 70%;
+    display: flex; flex-direction: column;
+}
+.body-2 > div:nth-of-type(2) > div:nth-of-type(1){flex-basis: 80%; background-color: chartreuse;}
+.body-2 > div:nth-of-type(2) > div:nth-of-type(2){flex-basis: 20%; background-color: blue;}
+
+
+/* 문제 3*/
+.container-3{
+    width: 800px; height: 500px;
+    display: flex; flex-direction: column;
+}
+.header-3 {flex-basis: 30%; background-color: yellow;}
+.body-3 {
+    flex-basis: 70%;
+    display: flex; flex-direction: row;
+}
+.body-3>div:nth-of-type(1){flex-basis: 30%; background-color: skyblue;}
+.body-3>div:nth-of-type(2) {
+    flex-basis: 70%; 
+    display: flex; flex-direction: column;
+}
+.body-3>div:nth-of-type(2)>div:nth-of-type(1){
+    flex-basis: 50%;
+    display: flex; flex-direction: row;
+}
+.body-3>div:nth-of-type(2)>div:nth-of-type(1)>div:nth-of-type(1){
+    flex-basis: 70%; background-color: aquamarine;
+}
+.body-3>div:nth-of-type(2)>div:nth-of-type(1)>div:nth-of-type(2){
+    flex-basis: 30%; background-color: orangered;
+}
+.body-3>div:nth-of-type(2)>div:nth-of-type(2){flex-basis: 50%; background-color: fuchsia;}
+
+
+/* 문제 4 */
+.container-4{
+    width: 800px; height: 500px;
+    display: flex; flex-direction: column;
+}
+
+.header-4, .footer-4{flex-basis: 20%; background-color: green;}
+.body-4 {
+    flex-basis: 60%; 
+    display: flex; flex-direction: row;
+}
+.body-4-left{flex-basis: 30%; background-color: yellow;}
+.body-4 > div:nth-of-type(2){flex-basis: 70%; background-color: orange;}
+.body-4-right{
+    height: 100%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.redsq{width: 30%; height: 50%; background-color: red;}
+
+
+/* 문제 5 */
+/* container 영역 */
+.container-5{
+    width: 800px; height: 500px;
+    display: flex; flex-direction: column;
+}
+
+/* header 영역 */
+.header-5 {
+    flex-basis: 30%; background-color: yellow;
+    display: flex; flex-direction: row;
+}
+
+.header-5 > div:nth-of-type(1){ flex-basis: 20%;}
+.header-5 > div:nth-of-type(2){ flex-basis: 40%;}
+.header-5 > div:nth-of-type(3){ flex-basis: 40%;}
+
+/* body 영역 */
+.body-5 { 
+    flex-basis: 70%;
+    display: flex; flex-direction: row;
+}
+
+/* body blue 영역 */
+.body-5-blue{ 
+    flex-basis: 30%; background-color: skyblue;
+    display: flex; flex-direction: column
+}
+.body-5-blue > div:nth-of-type(1) {flex-grow: 1;} /* flex-basis : calc(100%/3) 가능 */
+.body-5-blue > div:nth-of-type(2) {flex-grow: 1;}
+.body-5-blue > div:nth-of-type(3) {flex-grow: 1;}
+
+/* body pink1 영역 */
+.body-5-pink1 { flex-basis: 15%; background-color: pink;}
+
+/* body center 영역*/
+.body-5-center{
+    flex-basis: 40%; 
+    display: flex; flex-direction: column;
+}
+.body-5-orange {flex-basis: 50%; background-color: orange;}
+.body-5-center > div:nth-of-type(2){
+    flex-basis: 50%;
+    display: flex; flex-direction: row;
+}
+.body-5-green{
+    flex-basis: 50%; background-color: green;
+    display: flex; flex-direction: column;
+}
+.body-5-green div{flex-basis: 50%;}
+.body-5-red{flex-basis: 50%; background-color: red;}
+
+/* body pink2 영역 */
+.body-5-pink2 {
+    flex-basis: 15%; background-color: pink;
+    display: flex; flex-direction: column
+}
+.body-5-pink2 > div:nth-of-type(1) {flex-basis: 20%;}
+.body-5-pink2 > div:nth-of-type(2) {flex-basis: 60%;}
+.body-5-pink2 > div:nth-of-type(3) {flex-basis: 20%;}

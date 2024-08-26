@@ -1,0 +1,58 @@
+/* 화면배치 방법(형식) : display 속성 */
+.area1{ background-color: red;}
+.area2{ background-color: orange;}
+.area3{ background-color: yellow;}
+.area4{ background-color: green;}
+.area5{ background-color: blue;}
+
+.inline{ display: inline;}
+
+.block { display: block; width: 150px; height: 150px;}
+
+.inline-block { display: inline-block;}
+
+
+/* 감싸는 영역 요소*/
+#container-1 {border: 3px solid black; width: 323px; height: 472px;}
+
+/* 내부에 영역을 분할할 요소*/
+.div-1{ border: 1px dashed hotpink; height: 50%;}
+
+#container-1 > .div-1:first-of-type {/*  선택자는 자유롭게 쓸수 있음 ex) 태그명, 클래스명 등*/
+    background-color: red;
+    height: 30%;
+}
+
+#container-1 > .div-1:last-of-type{
+    background-color: blue;
+    height: 70%;
+    width: 50%;           /* 이 부분 주석해제하면 50%임 */
+}
+
+/* block 형식의 요소는 별도의 width가 지정되지 않으면 항상 100%임 */
+
+/* 상하3분할*/
+#container-2 {border: 3px solid black; width: 300px; height: 500px;} /* 감싸는 영역의 크기가 정해져 있어야 함*/
+.div-2{ border: 1px dashed hotpink;}
+#container-2 > .div-2:first-of-type{ background-color: red; height: 20%; }
+#container-2 > .div-2:nth-of-type(2) { background-color: orange; height: 30%; }
+#container-2 > .div-2:last-of-type{ background-color: yellow; height: 50%; }
+
+/*좌우 2분할*/
+#container-3 {border: 5px solid red; width: 400px; height: 200px;}
+.div-3{
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+}
+
+#container-3 > .div-3:first-of-type{background-color: pink;}
+#container-3 > .div-3:last-of-type{background-color: hotpink;}
+
+/* display: none */
+.div-4 { border: 3px solid black; height: 100px;}
+#test4 {
+    background-color: pink;
+    /* display: none; 아예 화면에 처음부터 없었던 것처럼 하고 싶을 때 */
+    visibility: hidden; /* 투명 but 영역을 차지하고 있음*/
+}

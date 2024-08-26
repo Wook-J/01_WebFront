@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>02_목록관련태그</title>
+    </head>
+    <body>
+        <h1>목록 관련 태그</h1>
+        <p>
+            <b>ul(Unordered List) 태그</b> : 순서가 없는 목록을 나타낼 때 쓰는 태그 <br>
+            <b>ol(Ordered List) 태그</b> : 순서가 있는 목록을 나타낼 때 쓰는 태그 <br>
+            <!-- ul, ol은 단일하게 사용 불가! 자식(li) 태그가 있어야 함-->
+
+            <b>li(List item) 태그</b> : ul, ol 태그 내부에 들어가 목록의 요소를 나타내는 태그<br>
+        </p>
+
+        <h3>ul 태그</h3>
+        <ul>
+            li 없는데에 쓰면 목록으로 인식이 되지 않음<br>
+            줄바꿈도 의미 없음  <!-- 들여쓰기는 됨-->
+            <li>김밥</li>
+            <li>서브웨이</li>
+            <li>백반</li>
+        </ul> <hr>
+
+        <h3>ol 태그</h3>
+        <p>
+            * ol 태그의 type 속성 <br>
+            type= "a" -> 소문자 알파벳 순서<br>
+            type= "A" -> 대문자 알파벳 순서<br>
+            type= "i" -> 소문자 로마 숫자 순서<br>
+            type= "I" -> 대문자 로마 숫자 순서<br>
+            type= "1" -> 아라비아 숫자 순서(기본값)<br>
+
+            start 속성 : 시작 번호를 지정할 경우 <br> 
+
+            reversed 속성 : 역순/ 속성값이 따로 없음 <br> <!-- 전체 개수를 센 뒤에 역순으로 진행-->
+            <!-- type start reversed 순서로 인식하는 듯-->
+        </p>
+
+        <ol type = "a" start="5" reversed>  <!-- a 대신에 A, i, I 대입하면 바뀜-->
+            <li>김밥</li>
+            <li>서브웨이</li>
+            <li>백반</li>
+        </ol>   <hr>
+
+        <ul>
+            <li>대분류 1</li>
+            <li>대분류 2
+                <ol>
+                    <li>소분류 1
+                        <ul>
+                            <li>세분류</li> <!-- alt shift 방향키(위, 아래) 그 줄 복붙-->
+                        </ul>
+                    </li>
+                    <li>소분류 2</li>
+                    <li>소분류 3</li>
+                </ol>
+            </li>
+            <li>대분류 3</li>
+        </ul> <hr>
+
+
+        <div style = "height: 200px;"></div>
+
+    </body>
+</html>

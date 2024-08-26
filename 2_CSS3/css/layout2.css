@@ -1,0 +1,66 @@
+/* 
+* {box-sizing: border-box;} 모든 요소 선택자를 이용하여 먼저 선언하고 시작하는 것이 보통임
+*/
+
+.box{ width: 100px; height: 100px; background-color: lightblue;}
+
+/* content 영역 */
+.content{ width: 150px; height: 150px;}
+/* width, height 속성은 기본적으로 content 영역의 크기를 지정하는 속성임*/
+
+/* border 영역 */
+.border{ border: 10px solid red;}
+
+/* padding 영역 */
+.padding { padding: 30px;}
+
+/* margin 영역 */
+.margin{ margin : 50px;}
+#m1 { margin: 100px;}
+/* 서로 다른 요소의 margin이 겹칠 경우 더 큰 margin을 가진 요소의 값을 따름 */
+
+
+.padding-test{
+    /* padding-top: 20px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 100px; */
+
+    /* padding 속성 : 작성법에 따라서 padding 특정방향에 크기를 지정할 수 있음 */
+    /* padding: 30px; 값이 1개인 경우 상하좌우 전부 적용 */
+    /* padding: 50px 100px; 값이 2개인 경우 상하, 좌우 순으로 적용 */
+    /* padding: 10px 50px 100px; 값이 3개인 경우 상, 좌우, 하 순으로 적용 */
+    padding: 10px 20px 30px 40px; /* 값이 4개인 경우 상, 우, 하, 좌(시계방향)으로 적용 */
+}
+
+/* border(속성이 padding, margin이랑 조금 다름) */
+.border-test{
+    /* border 속성은 상하좌우 방향을 각각 별도로 지정할 수 없음
+        값 1개만 작성이 가능한데 상하좌우 전부를 적용
+    */
+    /* border: 1px 2px 3px 4px solid red; 별도의 방향을 주려면 아래처럼 개별적으로 주어야 함*/
+    border-top: 3px solid black;
+    border-bottom: 5px dashed magenta;
+    border-left: 10px dotted blue;
+    border-right: 10px double orange;
+}
+
+.box-container { width: 500px; height: 300px; border: 2px solid black;}
+.margin-auto{
+    margin-top: 100px;
+    margin: auto;
+    /* margin : 값 1개면 상하좌우 전부 적용
+        좌우 요소 간의 간격을 자동으로 지정하여 가운데 정렬(상하 auto는 불가능)
+        -> 갑자기 margin-top을 무시
+        왜? 상(top) 부분에도 auto가 지정되어 이전에 100px가 auto로 덮어씌어짐
+        해결법 : margin-top을 아래쪽에 작성하여 auto를 100px로 다시 덮어쓰면 됨
+    */
+    margin-top: 100px;
+}
+
+#box-sizing { /* 테두리 10px, 패딩 20px, content 나머지인 전체 요소 크기가 가로, 세로 300px인 정사각형*/
+    border: 10px solid black;
+    padding: 20px;
+    width: 300px; height: 300px;
+    box-sizing: border-box; /* 중요함! 보통 맨처음에 주고 시작함 */
+}

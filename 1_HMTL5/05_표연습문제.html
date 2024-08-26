@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>05_표연습문제</title>
+        <style>     /*CSS 영역이어서 주석 쓰는 방법도 바뀜*/
+            .tb{border: 3px solid black;}  /* tb전체의 외곽*/
+            .tb th, .tb td{border: 1px solid black;}  /* 모든 .tb th, .tb td의 외곽, 각 셀마다*/
+            .tb thead{background-color: aqua;}
+            .tb tbody th{background-color: red;}
+            .tb tbody td{background-color: orange;}
+            .tb tfoot th{background-color: red;}
+            .tb tfoot td{background-color: yellow;}     /* 세부로 들어갈수록 덮어쓰기가 됨*/
+        </style>
+    </head>
+
+    <body>
+        <table class="tb">  <!-- 이 예제에는 표가 1개 밖에 없어서 class를 만들 필요는 없음-->
+            <thead>     <!-- 표에서 cell 만들 때 tr을 일단 만들고 시작-->
+                <tr><th colspan="5">하수정 컬렉선</th></tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th rowspan="5">제품리스트</th>
+                    <th>코드</th>
+                    <th>분류</th>   <!-- 여기에다 rowspan 하면 분류부분이 병합되면서 1열 밀림-->
+                    <th>가격</th>
+                    <th>구매가능개수</th>
+                </tr>
+
+                <tr>    <!-- 병합되는 셀을 제외하고 만들면 됨(if 5개 만들면 1열 밀림)-->
+                    <td>01-468</td>
+                    <td>봄</td>
+                    <td>200,000원</td>
+                    <td>1068</td>
+                </tr>
+
+                <tr>
+                    <td>01-223</td>
+                    <td>여름</td>
+                    <td>200,000원</td>
+                    <td>976</td>
+                </tr>
+
+                <tr>
+                    <td>01-626</td>
+                    <td>가을</td>
+                    <td>200,000원</td>
+                    <td>1205</td>
+                </tr>
+
+                <tr>
+                    <td>01-245</td>
+                    <td>겨울</td>
+                    <td>200,000원</td>
+                    <td>537</td>
+                </tr>
+           </tbody>
+
+            <tfoot>
+                <th colspan="3">총합</th>
+                <td>800,000원</td>
+                <td>3786</td>
+            </tfoot>
+        </table>
+
+    </body>
+
+</html>

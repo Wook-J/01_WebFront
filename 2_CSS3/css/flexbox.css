@@ -1,0 +1,125 @@
+div{        /* ctrl + / : 커서있는 라인 주석처리 하려는 경우 */
+    border : 1px solid black;
+    box-sizing: border-box;
+    /* content + padding + border 합으로 width/height 지정 */
+}  
+
+.item{ width: 75px; height: 75px; }
+
+.item1{ background-color: red; }
+.item2{ background-color: orangered; }
+.item3{ background-color: orange; }
+.item4{ background-color: yellow; }
+.item5{ background-color: yellowgreen; }
+.item6{ background-color: green; }
+.item7{ background-color: lightblue; }
+.item8{ background-color: blue; }
+.item9{ background-color: violet; }
+
+/* Flexbox 중 부모 요소 */
+.flex-container{
+    height: 400px;
+
+    display: flex;
+    /* 부모 요소에게 주는 css 속성 : 이 요소를 flexbox로 만들겠다는 선언 */
+
+    /* flex-direction(부모 전용 속성) : 메인축의 방향과 시작 위치를 지정하는 속성 */
+    /* flex-direction: row;             행 방향으로 메인축(가로, 기본값) */
+    /* flex-direction: column;          열(세로, column)방향이 메인축 */
+    /* flex-direction: row-reverse;     행 방향으로 메인축 + 순서 반대 */
+    /* flex-direction: column-reverse;  열 방향 메인축 + 순서 반대 */
+
+    /* flex-wrap (부모 전용 속성) : 내부 item들을 포장하는 속성  */
+    /* item들을 강제로 한 줄에 배치할 지, 한줄을 벗어나 여러줄로 배치할 지를 지정 */
+    /* flex-wrap: nowrap;         내부 item을 한줄로 배치(기본값) */
+    /* flex-wrap: wrap;           내부 item을 여러줄로 배치, 간격을 공평하게 나눔 */
+    /* flex-wrap: wrap-reverse;   내부 item을 뒤에서부터 여러줄로 배치 */
+
+    /* 메인축을 열방향으로 바꿈 -> 기본 메인축이 행방향이어서 아래 결과가 반대로 됨 */
+    /* flex-direction: column; */
+
+    /* justify-content (부모 전용 속성) : 메인축 방향으로 item의 정렬방법 조정 */
+    /* justify-content: flex-start;     item을 메인축 방향으로 앞에서부터 정렬(기본값) */
+    /* justify-content: flex-end;       item을 메인축 방향으로 뒤에 붙어서 정렬 */
+    /* justify-content: center;         item을 메인축 방향으로 가운데 정렬 */
+    /* justify-content: space-around;   item 주위에 메인축 방향 양쪽으로 일정 크기의 공간 추가 */
+    /*   -> 양끝은 조금, item 중간 사이는 넓게 떨어져 있다 -> 브라우저 크기에 따라 변함 */
+    /* justify-content: space-evenly;   item이 메인축 내에서 동일한 간격을 가짐 */
+    /* justify-content: space-between;  양 끝을 붙인 상태에서 item들의 간격을 일정하게 정렬 */
+
+    /* align-items (부모 전용 속성) : item들을 교차축 방향으로 정렬하는 방법을 지정하는 속성 */
+    /* align-items: flex-start;   교차축 앞에서부터 정렬(기본값) */
+    /* align-items: flex-end;     교차축 끝에 붙어서 정렬 */
+    /* align-items: center;       교차축 가운데에 정렬 */
+}
+
+/* 요소 정가운데 배치하기 */
+#con{
+    width: 450px; height: 450px;
+    display: flex;
+    justify-content: center;  /* 메인축 가운데 정렬 */
+    align-items: center;      /* 교차축 가운데 정렬 */
+    /* 부모 요소의 크기가 바뀌더라도 자식 요소가 항상 가운데에 있음 */
+}
+
+#center{ width: 80px; height: 80px; background-color: red; }
+
+
+/* item(자식)에게 주는 flex 속성*/
+
+/* flex-basis 메인축 방향으로의 기본 점유율 지정 */
+.basis-20{
+    /* flex-basis: auto; */
+    /* flex-basis: 0; */
+    flex-basis: 20%;
+    /* auto(기본값) : 요소 본래의 크기만큼 가짐
+       0 : 본래 요소의 크기 중 content 영역만을 남겨두고 차지하는 영역 없음
+       n% : 부모 요소의 크기중 n%를 차지
+    */
+}
+.basis-30{flex-basis: 30%;}
+.basis-50{flex-basis: 50%;}
+
+/* flex-grow 가용 공간을 얼마나 차지할지 item안쪽에서 여백의 비율을 나타냄 */
+/* 0(기본값) : item이 추가적인 가용공간을 차지하지 않음, 자신의 초기 크기만을 유지 */
+/* 설정값은 여백의 비율로 적용됨 */
+.grow1 { flex-grow: 1;}
+.grow2 { flex-grow: 2;}
+.grow3 { flex-grow: 1;}
+
+/* flex-shrink */
+/* 1(기본값) : 컨테이너(부모요소)의 크기가 줄어들면 다른 항목들과 비율적으로 축소될수 있음을 의미 */
+/* 0 : item이 줄어들지 않음을 의미(컨테이너의 크기가 줄어들어도 비율이 축소되지 않음) */
+/* 2 : 1보다 2배의 비율로 크기가 줄어듦 */
+.shrink1{ flex-shrink: 1;}
+.shrink2{ flex-shrink: 0;}
+.shrink3{ flex-shrink: 2;}
+
+/* flex : grow, shrink, basis를 한 번에 사용*/
+.flex-test1{
+    flex: 1;
+    /* flex-grow: 1;
+       flex-shrink: 1;
+       flex-basis: 0%;  없는 셈 치고 grow를 따름?
+    */
+}
+.flex-test2{
+    flex: 1 1 auto;
+    /* flex-grow: 1;       여백이 차지하는 비율
+       flex-shrink: 1;     줄어드는 비율
+       flex-basis: auto;   내용물에 의해서 결정?
+    */
+}
+.flex-test3{
+    flex: 1 500px;
+    /* flex-grow: 1;       여백이 차지하는 비율
+       flex-shrink: 1;     줄어드는 비율
+       flex-basis: 500px;  item의 기본크기가 500px로 설정됨
+    */
+}
+
+/* order : order 값이 작을수록 앞부분으로 이동함 */
+/* 기본값 0(기본순서를 유지), 정수값을 가질 수 있음 */
+.order:nth-child(1){ order: 0;}  /* A */
+.order:nth-child(2){ order: -2;}  /* B */
+.order:nth-child(3){ order: 1;}  /* C */

@@ -1,0 +1,82 @@
+/* color 속성 */
+#color-ul > li{ font-size: 24px; font-weight: bold; }
+#color-ul > li:nth-of-type(1) {color: red;}
+#color-ul > li:nth-of-type(2) {color: #bd14db;}
+#color-ul > li:nth-of-type(3) {color: rgb(28, 181, 232);} /* 0 ~ 255 */
+#color-ul > li:nth-of-type(4) {color: rgba(28, 181, 232, 0.6);} /* 0(불투명) ~ 1(투명) 소수점 가능 */
+#color-ul > li:nth-of-type(5) {color: hsl(360, 100%, 50%);}
+#color-ul > li:nth-of-type(6) {color: hsla(360, 100%, 50%, 0.4);}
+
+/* text-decoration */
+#deco-ul > li:nth-child(1) {text-decoration: underline;}
+#deco-ul > li:nth-child(2) {text-decoration: line-through;}
+#deco-ul > li:nth-child(3) {text-decoration: overline;}
+#deco-ul > li:nth-child(4) > a {text-decoration: none; color: violet;}
+
+/* text-align : 가로 방향 조정만 가능*/
+#align-test{ width: 350px; border: 2px solid black;}
+#align-test > p:nth-child(1) {text-align: left;}    /* 기본값 왼쪽 정렬 */
+#align-test > p:nth-child(2) {text-align: right;}   /* 오른쪽 정렬 */
+#align-test > p:nth-child(3) {text-align: center;}  /* 가운데 정렬 */
+#align-test > p:nth-child(4) {text-align: justify;} /* 양쪽 정렬 */
+
+/* inline-block 형식으로 변경 */
+#div1 > div{ 
+  width: 50px; height: 50px; 
+  background-color: red;
+  display: inline-block;  /* 정렬방식이 inline으로 되어야 함. 편법같은 느낌*/
+}
+#div1{text-align: center;}
+
+/* line-height : text block이 넓어지는 거고, 줄간 간격 자체가 넓어지는 것이 아님 */
+#line-test > p:last-child {
+  line-height: 30px;
+}
+
+/* line-height 응용법 */
+#center-test{
+  width: 200px; height: 200px; border: 1px solid black;
+  text-align: center;   /* 가로 정렬을 위한 속성*/
+  /* display: flex; justify-content: center; align-items: center; 로도 가능! */
+}
+#center-test > span {
+  background-color: pink;
+  line-height: 200px;   /* 부모 요소 높이와 동일한 line-height 설정으로 세로 중앙 정렬이 가능 */
+}
+
+/* letter-spacing */
+#letter-test{letter-spacing: 15px;}
+
+/* test-shadow : 3px 5px 7px red; 생각보다 자주 씀!
+  - 텍스트를 기준으로 오른쪽 3px, 아래쪽으로 5px으로 떨어져 있고,
+  - 7px만큼 흐리게 퍼져 있는데, red 색상임
+*/
+#shadow-test {background-color: black; padding: 30px;}
+#shadow-test > p { font-size: 75px; font-weight: bold;}
+#shadow-test > p:nth-child(1) { 
+  color: orange;
+  text-shadow: 3px 3px white;  /* 오른쪽 3px, 아래쪽 5px, 퍼짐 없음 */
+}
+#shadow-test > p:nth-child(2) {
+  color: white;
+  text-shadow: 5px 5px 5px #bbb; /* 오른쪽 3px, 아래쪽 5px, 퍼짐 5px */
+}
+#shadow-test > p:nth-child(3) {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0px 0px 10px magenta;  /* 오른쪽, 아래쪽 이동x, 퍼짐 10px */
+}
+#shadow-test > p:nth-child(4) {
+  text-shadow: 0px 0px 4px #ccc,
+               0px -5px 4px #ff3,     /* 오른쪽 0px, 위로 5px, 퍼짐 4px */
+               2px -10px 6px #fd3,    /* 오른쪽 2px, 위로 10px, 퍼짐 6px */
+              -2px -15px 11px #f80,  /* 왼쪽 2px, 위로 15px, 퍼짐 11px */
+               2px -20px 18px #f20;   /* 오른쪽 2px, 위로 20px, 퍼짐 18px */
+               
+}
+
+#my-btn{
+  height: 40px; width: 40px;
+  border: none; background-color: transparent; /* 투명 */
+  color: red;
+  cursor: pointer;
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_CSS개요,CSS선택자1</title>
+
+  <style>
+    /* CSS 영역 */
+    /* style 태그 : css 코드만 작성할 수 있는 영역을 제공하는 태그 */
+
+    /*tag 선택자*/
+    div {
+      border: 3px solid red;
+    }
+    /*테두리 : 3px 두께의 실선 빨간색*/
+
+    strong {
+      background-color: yellow;
+    }
+
+    div ul span {
+      background-color: pink;
+    }
+
+    /* id 선택자 */
+    #li-1 {
+      background-color: red;
+    }
+
+    #li-2 {
+      background-color: orange;
+    }
+
+    #li-3 {
+      background-color: yellow;
+    }
+
+    #li-4 {
+      background-color: green;
+    }
+
+    #li-5 {
+      background-color: blue;
+    }
+
+    /* class 선택자 */
+    .test-1 {
+      background-color: black;
+      color: white;
+    }
+
+    .test-2 {
+      color: red;
+    }
+
+    .aaa {
+      font-size: 15px;
+      color: green;
+    }
+
+    /* @는 CSS에서 사용하는 규칙을 나타내는 기호
+      -> font-face : 사용자 정의 폰트를 내 웹사이트에서 사용할 수 있게 정의함
+    */
+
+    @font-face {
+      /*이런 폰트가 있다고 정의만 한 상태*/
+      font-family: 'Ownglyph_UNZ-Rg';
+      src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/Ownglyph_UNZ-Rg.woff2') format('woff2');
+      font-weight: normal;
+      /* 폰트의 굵기*/
+      font-style: normal;
+    }
+
+    /* 모든 요소 선택자 */
+    * {
+      font-family: 'Ownglyph_UNZ-Rg';      /* 글꼴모양 복사*/
+      font-size: 20px;                     /* 글꼴 크기 */
+    }
+
+    /* 같은 레벨의 선택자 + 같은 css 코드를 쓰면 순차적으로 적용됨 */
+  </style>
+</head>
+
+<body>
+  <h1>CSS(Cascading Style Sheets)</h1>
+  <pre>
+      마크업 언어(HTML)가 실제로 화면에 표시(모양, 글씨체, 색상, 크기...)되는 방법을 기술하는 언어.
+      head태그 안쪽에 style 태그를 이용
+        </pre>
+  <hr>
+
+  <h1>CSS Selector(선택자)</h1>
+  <pre>
+      현재 html 문서 내에서 특정한 요소를 선택하는 문자 또는 문자열.
+        <!-- 요소란 태그를 이용해서 만든 모든 것, 종류 다양(class="tb" id="test" 등) -->
+      == 스타일을 적용하고자 하는 요소를 선택하는 방법
+        </pre>
+  <hr>
+
+  <h3>태그 선택자</h3>
+  <pre>
+      현재 HTML 문서 내에 같은 태그를 선택하는 선택자
+
+      [작성법] <!-- 스타일 태그 내부에 쓰면 됨-->
+
+      태그명 { CSS 코드; }
+
+      ex)
+      pre{ font-size : 50px; }
+        </pre>
+
+  <div>
+    <strong>strong 태그에 작성된 내용</strong> <br>
+    <span>span 태그에 작성된 내용</span>
+
+    <ul>
+      <li><strong>strong 태그에 작성된 내용</strong></li>
+      <li><span>span 태그에 작성된 내용</span></li>
+    </ul>
+  </div>
+  <hr>
+
+  <h3>id 선택자</h3>
+  <pre>
+      HTML 문서 내에서 id 속성값이 일치하는 요소를 선택하는 선택자
+
+      [작성법]
+      #id 속성값{ css코드; }
+        </pre>
+
+  <ol> <!-- id 속성값은 하나의 HTML 문서내에서 중복되면 절대 안됨-->
+    <li id="li-1">id 선택자 테스트 1</li>
+    <li id="li-2">id 선택자 테스트 2</li>
+    <li id="li-3">id 선택자 테스트 3</li>
+    <li id="li-4">id 선택자 테스트 4</li>
+    <li id="li-5">id 선택자 테스트 5</li>
+  </ol>
+  <hr>
+
+  <h3>class 선택자</h3>
+  <pre>
+      HTML 문서 내에서 같은 class 속성값을 가지는 태그를 모두 선택하는 선택자
+
+      [작성법]
+      .class속성값 { css 코드; }
+        </pre>
+
+  <ul> <!-- 복수 개의 클래스 값을 가질 수 있음, 띄어쓰기로 구분-->
+    <li class="test-1 aaa">클래스 선택자 테스트</li> <!-- test-1과 aaa 클래스 2개 가짐-->
+    <li class="test-2">클래스 선택자 테스트</li>
+    <li class="test-1">클래스 선택자 테스트</li>
+    <li class="test-2 aaa">클래스 선택자 테스트</li>
+    <li class="test-1">클래스 선택자 테스트</li>
+  </ul>
+  <hr>
+
+  <h3>모든 요소 선택자</h3>
+  <pre>
+    모든 요소를 선택하는 선택자
+
+    [작성법] * { css 코드; }
+  </pre>
+
+
+
+
+
+  <div style="height: 300px; border: none;"></div>
+
+</body>
+
+</html>

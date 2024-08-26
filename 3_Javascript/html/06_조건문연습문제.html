@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>06_조건문연습문제</title>
+  <link rel="stylesheet" href="../css/06_조건문연습문제.css">
+</head>
+
+<body>
+  <div>
+    <h2>문제1</h2>
+    <p>주어진 숫자 a와 b의 크기판단</p>
+    <button onclick="compare1()">판단하기</button>
+    <strong>결과</strong> <span id="result1"></span>
+  </div>
+
+  <div>
+    <h2>문제2</h2>
+    <p> 주어진 숫자 n의 홀짝 판단</p>
+    <button onclick="compare2()">판단하기</button>
+    <strong>결과</strong> <span id="result2"></span>
+  </div>
+
+  <div>
+    <h2>문제3</h2>
+    <p>주어진 세 숫자 x, y, z 중 가장 큰 숫자를 찾아서 출력</p>
+    <button onclick="compare3()">판단하기</button>
+    <strong>결과</strong> <span id="result3"></span>
+  </div>
+
+  <div>
+    <h2>문제4</h2>
+    <p>입력받은 문자열 str이 "apple"인지, "banana"인지, 혹은 다른 문자열인지를 판단하여 출력</p>
+    <input type="text" id="input4" placeholder="문자열을 입력하세요"> 
+    <button onclick="compare4()">판단하기</button> <br>
+    <strong>결과</strong> <span id="result4"></span>
+  </div>
+
+  <div>
+    <h2>문제5</h2>
+    <p>점수에 따른 학점 부여</p>
+    <pre>
+    90점 초과 A/  81~90 사이 B/  71~80 사이 C/  61~70 사이 D/  60점 미만 F
+
+    </pre>
+    점수 입력 : <input type="number" id="input5" max="100" min="0">
+    <button onclick=compare5()>제출하기</button> <br>
+    <strong>학점</strong> <span id="result5"></span>
+  </div>
+
+  <div>
+    <h2>문제6</h2>
+    <p>놀이기구 탑승제한 검사</p>
+    <fieldset><legend>[조건]</legend>
+      나이가 12세 이상, 키 140.0cm 이상일 경우에만 "탑승 가능" 출력 <br>
+      나이가 12세 미만 : "적정 연령이 아닙니다." 출력 <br>
+      키 140.0cm 미만  : "적정 키가 아닙니다." 출력 <br>
+      나이를 0세 미만 또는 100세 초과 입력 시 : "잘못 입력 하셨습니다."
+    </fieldset> <br>
+    
+
+
+    </pre>
+    나이 : <input type="number" id="age"> <br>
+    키 : <input type="number" id="height"> <br>
+    <button onclick="compare6()">제출하기</button>
+    <strong>결과</strong> <span id="result6"></span>
+  </div>
+
+  <div>
+    <h2>문제7</h2>
+    <p>입력받은 달(month)에 따른 계절 출력</p>
+    달 : <input type="number" id ="month" min="1" max="12">
+    온도 : <input type="number" id="temp" placeholder="여름, 겨울 시 추가입력"> <br>
+    <button onclick="compare7()">제출하기</button>
+    <strong>결과</strong> <span id="result7"></span>
+  </div>
+
+<!-- 문제7 : 입력받은 달(month)에 따른 계절 출력
+3,4,5 월은 "봄" 출력
+6,7,8 월은 "여름" 출력
+9,10,11 월은 "가을" 출력
+12,1,2월은 "겨울" 출력
+
+단, 여름/겨울에 해당하는 달 입력 시 온도를 입력받아
+여름에는 30도 이상시 "폭염" 출력
+겨울에는 0도 이하시 "한파" 출력
+  
+-->
+
+
+  <script src="../js/06_조건문연습문제.js"></script>
+</body>
+
+</html>

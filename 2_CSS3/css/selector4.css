@@ -1,0 +1,51 @@
+/* 일반 구조 선택자*/
+
+/* :first-child 형제 관계의 요소 중 첫번째 요소 
+    #test1의 자식 요소들 중 첫번째 자식이 p태그 인가를 판단함, 순서가 중요함,
+    pre:first(6번째 요소)로 입력하면 css가 인식 못함
+*/
+#test1 > p:first-child {background-color: red; color: white;}
+
+/* :last-child 형제 관계의 요소 중 마지막 요소
+    #test의 자식 요소들 중 마지막 자식이 pre태그 인가를 판단함
+    p:last-child로 입력하면 스타일 적용이 안됨
+*/
+#test1 > pre:last-child {background-color: orange;}
+
+/* nth-child(수열) : 형제 관계 요소 중 지정된 수열번째 요소를 모두 선택 
+    - 순서 따질 때 1부터 시작
+    - #test1의 자식 요소 중 2번째 요소를 선택하고, 선택된 요소가 p태그인지를 검사
+*/
+#test1 > p:nth-child(2) { background-color: yellow;}
+
+/* 홀수/짝수 번째 형제 요소를 선택, n=0부터 계산함
+    - 선택된 요소가 p태그인지를 검사하는 것이어서 pre태그이면 스타일 적용 안됨
+*/
+#test1 > p:nth-child(2n+1) { font-weight: bold; font-size: 30px;}
+#test1 > p:nth-child(2n) { border: 3px solid black;}
+
+/* nth-last-child(수열) 형제 관계 요소 중 뒤에서부터 지정된 수열번째 요소를 모두 선택 */
+#test1 > p:nth-last-child(2) { color: hotpink;}
+
+
+/* 형태 구조 선택자*/
+
+/* :first-of-type 같이 선택된 형제들 중 첫번째 요소를 선택
+    #test2의 자식들 중 p태그들을 고른 후, 그 중 첫번째 요소를 선택
+*/
+#test2 > p:first-of-type {background-color: orange;}
+
+/* :last-of-type 같이 선택된 형제들 중 마지막 요소를 선택*/
+#test2 > p:last-of-type{ background-color: skyblue;}
+
+/* :nth-of-type(수열) 같이 선택된 형제들 중 수열번째의 모든 요소를 선택 */
+#test2 > p:nth-last-of-type(2n+1) {font-size: 30px;}
+
+/* :nth-last-of-type(수열) 같이 선택된 형제들 중 뒤에서부터 지정된 수열번째 요소를 모두 선택*/
+#test2 > p:nth-last-of-type(2n){ background-color: red;}
+
+
+/* 부정 선택자 
+    cf: 그냥 3n만 집어넣으면 안됨/ not 괄호안에는 선택자를 넣어야 함!
+*/
+#test3 > li:not(:nth-of-type(3n)) {background-color: aqua;}
