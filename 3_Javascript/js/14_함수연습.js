@@ -116,3 +116,5 @@ function sayGoodbye(name){ return "조심히 가세요 "+ name;}
 function sayHello(name){ return "안녕하세요 "+ name;}
 
 console.log("12번 :", prob12("WookJae", sayHello));
+
+console.log("git Test 중 학원에 있는 컴퓨터에서 작성!");
