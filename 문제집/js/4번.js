@@ -24,8 +24,8 @@ document.getElementById("btn").addEventListener("click", () => {
 
   let evenOrOdd = "";                                                         // 짝홀 구분할 문자
 
-  if (numberInput % 2 == 0) evenOrOdd = `${numberInput}은 짝수입니다.`;
-  else evenOrOdd = `${numberInput}은 홀수입니다.`;
+  if (numberInput % 2 == 0) evenOrOdd = `${numberInput}은/는 짝수....`;
+  else evenOrOdd = `${numberInput}은/는 홀수....`;
 
-  setTimeout(() => { alert(`${evenOrOdd}`); }, 3000);                         // 3초 후 알람창
+  setTimeout(() => { alert(`${evenOrOdd}`); }, 2000);                         // 2초 후 알람창
 });
