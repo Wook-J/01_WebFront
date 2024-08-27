@@ -62,14 +62,14 @@ console.log("number3 : "+number3);
 const PI = 3.141592;
 // PI = 1.123124;  // 새로운 값 대입하려 해서 에러남, TypeError: Assignment to constant variable.
 // const test;    // 선언과 동시에 초기화 해야 함, SyntaxError: Missing initializer in const declaration
-console.log("PI : " + PI);
+console.log("PI : ", PI);
 //----------------------------------------------------------------------
 
 // 블록 레벨 scope(범위) / 함수 레벨 scope
 
 // 블록 레벨 scope (let, const)
 // : let과 const로 선언된 변수/상수는 변수가 선언된 블록(중괄호 {}) 내부에서만 유효함
-// 즉, 코드 블록 내부에서 선언한 변수(let, const)느 해당 블록 외부에서는 접근할 수 없음
+// 즉, 코드 블록 내부에서 선언한 변수(let, const)는 해당 블록 외부에서는 접근할 수 없음
 let foo1 = 123;  // 전역 변수
 const foo2 = 456;  // 전역 변수
 
