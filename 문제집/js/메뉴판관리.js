@@ -14,9 +14,17 @@ const resNameInput = document.getElementById("resNameInput");
 resName.addEventListener("click", ()=>{
   resName.style.display = "none";
   resNameInput.style.display = "block";
+  resNameInput.focus();
 });
 
 resNameInput.addEventListener("blur", ()=>{
+
+  if (resNameInput.value.length ==0){
+    resName.innerText = "식당명을 입력하세요";
+    resName.style.display = "block";
+    resNameInput.style.display= "none";
+    return;
+  }
   resName.innerText = resNameInput.value;
   resName.style.display = "block";
   resNameInput.style.display= "none";
