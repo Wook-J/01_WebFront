@@ -148,6 +148,8 @@ addMenu.addEventListener("click", e => {
 deleteMenu.addEventListener("click", e => {
   const checkMenu = document.querySelectorAll(".menu-check:checked");
 
+  //checkMenu = [1, 2, 3, 4]
+
 
   checkMenu.forEach(item => {
     item.parentElement.remove();
