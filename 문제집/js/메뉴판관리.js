@@ -55,12 +55,14 @@ const createMenuContent = () => {               // 메뉴 내부 요소 생성 �
 
 // #updateBtn (수정버튼) 클릭 시 -------------------------------------------------------
 document.getElementById("updateBtn").addEventListener("click", () => {
+
   normalContainer.classList.toggle("b-hidden");       // 메뉴판 수정모드로 변경
   editContainer.classList.toggle("b-hidden");
+
   // ------------------ 여기가 수정기능 -------------------------------------
   const menuList = document.querySelectorAll(".menu");
 
-  console.log(menuList);    // menuList는 NodeList 형태
+  // console.log(menuList);    // menuList는 NodeList 형태
   
   menuList.forEach(menu => {
     const menuName = menu.children[0].textContent;
@@ -82,6 +84,7 @@ document.getElementById("updateBtn").addEventListener("click", () => {
 
 // #exitBtn (종료버튼) 클릭 시 ----------------------------------------------
 exitBtn.addEventListener("click", e => {
+
   normalContainer.classList.toggle("b-hidden");     // 메뉴판 모드로 변경
   editContainer.classList.toggle("b-hidden");
 
@@ -128,7 +131,23 @@ deleteMenu.addEventListener("click", e => {
 
 });
 
+/*
+  forEach(함수) : 배열의 각 요소에 대해 순차적으로 접근하면서 
+  전달인자 함수를 한 번씩 실행하는 JavaScript의 메서드
 
+  예시 ) 
+  const fruits = ['apple', 'banana', 'cherry'];
+
+  fruits.forEach(function(fruit, index) {
+      console.log(`${index}: ${fruit}`);
+  });
+
+  출력결과 ) 
+  0: apple
+  1: banana
+  2: cherry
+
+*/
 
 
 
