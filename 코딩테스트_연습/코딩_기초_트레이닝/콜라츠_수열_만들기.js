@@ -4,10 +4,24 @@ function solution(n) {
 
   while (temp !== 1) {
     result.push(temp);
-    if (temp % 2 === 0) temp = temp / 2;
+    if (temp % 2 == 0) temp /= 2;
     else temp = 3 * temp + 1;
+
+    if (temp == 1) {
+      result.push(temp);
+      break;
+    }
   }
 
-  result.push(1);
   return result;
+}
+
+// 다른 사람 풀이
+function solution(n) {
+  const res = [n];
+  while (n !== 1) {
+    n = n % 2 === 0 ? n / 2 : 3 * n + 1;
+    res.push(n);
+  }
+  return res;
 }
